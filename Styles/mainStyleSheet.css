@@ -296,7 +296,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem 0;
+    padding: 4rem 0 0;
 }
 
 .landing-section .question_section h2 {
@@ -305,11 +305,17 @@ body {
 
 .landing-section .question_section .buttons-container {
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2vw;
+    display: flex;
     justify-content: center;
     align-items: center;
+    grid-gap: 2vw;
+}
+
+@media (max-width: 500px) {
+    .landing-section .question_section .buttons-container {
+        flex-direction: column;
+        grid-gap: 2vh;
+    }
 }
 
 .landing-section .question_section .buttons-container .worker,
